@@ -2,6 +2,8 @@
 
 A one-page landing site with Apple-style scroll scenes. It is plain HTML, CSS and JavaScript, so there is nothing to install and no build step. GitHub Pages can host it for free.
 
+**Live at https://vishalbhoir18.github.io/Imperishable_novel/** (the Lens Lab: `…/lab.html`), from the GitHub repository `vishalbhoir18/Imperishable_novel`.
+
 ## What's in this folder
 
 | Path | What it is |
@@ -41,36 +43,29 @@ email:     'you@example.com',
 
 ## 2. Put it on GitHub Pages
 
-The site has about 630 files, and GitHub's drag-and-drop uploader takes only 100 at a time, so use the free **GitHub Desktop** app (desktop.github.com):
+The site has about 730 files, and GitHub's drag-and-drop uploader takes only 100 at a time, so use the free **GitHub Desktop** app (desktop.github.com):
 
 1. In GitHub Desktop, choose **File → Add local repository**, pick this `website` folder, and accept the offer to **create a repository** there. Name it, for example, `imperishable`.
 2. Type a summary such as "First version" and click **Commit to main**.
 3. Click **Publish repository**, untick **Keep this code private**, and publish.
 4. On github.com, open the new repository, so `index.html` should be at its top level.
 5. Open **Settings → Pages**. Under *Build and deployment*, choose **Deploy from a branch**, then branch **main** and folder **/ (root)**, and click **Save**.
-6. Wait a minute or two. The site appears at `https://<your-username>.github.io/imperishable/`.
+6. Wait a minute or two. The site appears at `https://<your-username>.github.io/<repository-name>/`.
 
 To update the site later, edit a file here, then in GitHub Desktop click **Commit to main** and **Push origin**. For a small change, such as a link in `config.js`, you can instead edit the file on github.com with the pencil icon. Pages republishes on its own within a minute or two.
 
 The empty `.nojekyll` file tells GitHub to serve the files exactly as they are. Leave it in.
 
-## 3. Fix the share preview (one line, after your address is known)
+## 3. The share preview
 
-Facebook, X, LinkedIn and WhatsApp need the **full** address of the preview image. In `index.html`, replace the two lines
+Facebook, X, LinkedIn and WhatsApp need the page's **full** address to show a preview picture. Both pages already carry it for `https://vishalbhoir18.github.io/Imperishable_novel/`:
 
-```html
-<meta property="og:image" content="assets/img/og-image.jpg">
-<meta name="twitter:image" content="assets/img/og-image.jpg">
-```
+- `index.html` shows `assets/img/og-image.jpg` (the book).
+- `lab.html` shows `assets/img/og-lab.jpg` (the Lens Lab's black hole).
 
-with your real address, for example
+If the address ever changes (a renamed repository, or your own domain), search both files for `vishalbhoir18.github.io/Imperishable_novel/` and replace every copy: `og:url`, `canonical`, `og:image`, `twitter:image`, and in `index.html` the `url` and `image` in the book details near the top.
 
-```html
-<meta property="og:image" content="https://<your-username>.github.io/imperishable/assets/img/og-image.jpg">
-<meta name="twitter:image" content="https://<your-username>.github.io/imperishable/assets/img/og-image.jpg">
-```
-
-You can check the result with LinkedIn's Post Inspector or by pasting the link into a draft post.
+You can check a preview with LinkedIn's Post Inspector, or by pasting the link into a draft post. Sites cache previews, so a link shared before this change may take a while to refresh.
 
 ## 4. Optional: your own domain
 
